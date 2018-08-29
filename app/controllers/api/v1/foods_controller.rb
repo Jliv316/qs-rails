@@ -12,7 +12,6 @@ class Api::V1::FoodsController < ApplicationController
   end
 
   def create
-    binding.
     food = Food.create(food_params)
 
     render json: food, status: 201
