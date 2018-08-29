@@ -1,7 +1,7 @@
 class Api::V1::FoodsController < ApplicationController
   def index
     foods = Food.all
-    
+
     render json: foods, status: 200
   end
 
@@ -12,6 +12,7 @@ class Api::V1::FoodsController < ApplicationController
   end
 
   def create
+    binding.pry
     food = Food.create(food_params)
 
     render json: food, status: 201
